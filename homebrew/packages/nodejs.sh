@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 brew list | grep node > /dev/null
 if [ $? -eq 1 ]; then
@@ -7,7 +7,7 @@ if [ $? -eq 1 ]; then
     npm@latest
     json
   )
-  npm install -g ${PACKAGES[@]}
+  npm install -g "${PACKAGES[@]}"
 else
 	echo "node is already installed"
 fi

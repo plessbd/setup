@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 # Homebrew
 #
@@ -6,7 +6,7 @@
 # using Homebrew.
 
 which -s brew
-if [[ $? != 0 ]] ; then
+if [ $? != 0 ] ; then
   # Install Homebrew
   # http://brew.sh/
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -21,15 +21,16 @@ taps=(
 )
 
 brewgrams=(
-  wget
-  ssh-copy-id
-  tree
-  caskroom/cask/brew-cask
-  android-platform-tools
-  dockutil
+	hub
 	ngrep
 	shellcheck
 	thefuck
+  android-platform-tools
+  caskroom/cask/brew-cask
+  dockutil
+  ssh-copy-id
+  tree
+  wget
 )
 
 for tap in "${taps[@]}";
@@ -37,11 +38,8 @@ do
 	brew install $tap
 done
 
-brew install ${brewgrams[@]}
+brew install "${brewgrams[@]}"
 
-for file in `find $(dirname $0)/packages/*.sh`;
-do
-  sh $file
-done
+find "$(dirname $0)"/packages/ -name "*.sh" | while read package ; do sh "${package}" ; done
 
 exit 0

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 CASKS=(
   bettertouchtool
@@ -22,6 +22,6 @@ CASKS=(
   vlc
 )
 
-brew cask install --appdir=/Applications ${CASKS[@]}
+brew cask install --appdir=/Applications "${CASKS[@]}"
 
 exit 0

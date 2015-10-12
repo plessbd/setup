@@ -1,3 +1,4 @@
+#!/bin/sh
 #https://mochtu.de/2015/01/07/updating-openssh-on-mac-os-x-10-10-yosemite/
 
 #!/bin/sh

@@ -1,3 +1,4 @@
+#!/bin/sh
 brew list | grep nginx-full > /dev/null
 if [ $? -eq 1 ]; then
 
@@ -7,9 +8,9 @@ if [ $? -eq 1 ]; then
 		--with-upload-progress-module --with-http2 --with-realip \
 		--with-txid --devel
 
-		mkdir $(brew --prefix)/etc/nginx/{sites-enabled,sites-available,ssl}
+		mkdir "$(brew --prefix)/etc/nginx/{sites-enabled,sites-available,ssl}"
 
-		rm -rf $(brew --prefix)/etc/nginx/servers
+		rm -rf "$(brew --prefix)/etc/nginx/servers"
 
 		$setupHome/bin/createCAandCert.sh -c blahblahblah -b
 
