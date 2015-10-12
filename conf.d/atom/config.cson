@@ -1,0 +1,16 @@
+"*":
+  "exception-reporting":
+    userId: "4f06cd20-f97d-9a24-581b-68025519835b"
+  welcome:
+    showOnStartup: false
+  core:
+    excludeVcsIgnoredPaths: false
+  editor:
+    invisibles: {}
+    showIndentGuide: true
+    showInvisibles: true
+    softWrap: true
+    softTabs: false
+    softWrapAtPreferredLineLength: true
+    tabType: "hard"
+    preferredLineLength: 120
