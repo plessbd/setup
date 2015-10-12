@@ -13,7 +13,11 @@ fi
 # Customize to your needs...
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
-export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
+# export PATH="/Volumes/750GBHD/usr/local/bin:/Volumes/750GBHD/usr/local/sbin:$PATH"
+
+
+
+#export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
 
 alias loic='sudo lsof -i TCP -Pn | egrep -v "(Google|launchd|Adium|vpnagentd|ciscod|apsd|synergyc|Sophos|Spotify)" | sort'
 

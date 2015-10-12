@@ -20,4 +20,5 @@ if [ ! -e /opt/homebrew-cask ]; then
 	ln -s /Volumes/750GBHD/opt/homebrew-cask /opt/homebrew-cask
 fi
 
-$setupHome/osx-defaults/install.sh
+# find the installers and run them iteratively
+find . -name install.sh | while read installer ; do sh "${installer}" ; done

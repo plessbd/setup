@@ -7,11 +7,12 @@
 
 which -s brew
 if [[ $? != 0 ]] ; then
-    # Install Homebrew
-    # http://brew.sh/
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  # Install Homebrew
+  # http://brew.sh/
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 else
-    brew update
+	echo "Updating hombrew"
+  #brew update
 fi
 
 taps=(
