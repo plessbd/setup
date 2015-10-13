@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 SCRIPT=`basename ${BASH_SOURCE[0]}`
 BYPASS=false
@@ -25,7 +25,7 @@ function HELP {
 	exit 1
 }
 # Default values
-USERS_NAME="$(finger $(whoami) | egrep -o 'Name: [a-zA-Z0-9 ]{1,}' | cut -d ':' -f 2 | xargs echo)"
+USERS_NAME="$(finger "$(whoami)" | egrep -o 'Name: [a-zA-Z0-9 ]{1,}' | cut -d ':' -f 2 | xargs echo)"
 CERT_DESTINATION="$(brew --prefix)/etc/nginx/ssl/"
 CA_FILELOCATION="/Users/$(whoami)/Library/Application Support/Certificate Authority/${USERS_NAME}'s CA"
 C="US"

@@ -6,6 +6,7 @@ if [ $? -eq 1 ]; then
 	if [ -d ~/.atom/ ]; then
 		mkdir ~/.atom/
 	fi
+	#shellcheck disable=SC2154
 	cp $setupHome/conf.d/atom/config.cson ~/.atom/
 	apm stars -i -u plessbd
 else

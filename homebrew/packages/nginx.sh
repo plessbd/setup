@@ -12,6 +12,7 @@ if [ $? -eq 1 ]; then
 
 		rm -rf "$(brew --prefix)/etc/nginx/servers"
 
+		#shellcheck disable=SC2154
 		$setupHome/bin/createCAandCert.sh -c blahblahblah -b
 
 	else

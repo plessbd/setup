@@ -8,6 +8,7 @@ if [ $SHELL != "/usr/local/bin/zsh" ]; then
 	chsh -s "$(which zsh)"
 fi
 
+#shellcheck disable=SC2154
 sed "s/\# eval prompt_garrett_current_time='\\$.green.%\*/eval prompt_garrett_current_time='\\$\{green\}%\*/p" $setupHome/conf.d/zsh/zsh-prompt-garrett/prompt_garrett_setup > ~/.zprezto/modules/prompt/functions/prompt_garrett_setup
 
 cp $setupHome/conf.d/zsh/zpreztorc ~/.zpreztorc
