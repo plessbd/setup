@@ -1,4 +1,4 @@
-Use this for clean OSX installs
+I use this for clean OSX installs, there are some things I do specifically for my setup, so dont just follow blindly
 
 just run bootstrap.sh
 
