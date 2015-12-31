@@ -14,6 +14,7 @@ CASKS=(
   qlcolorcode
   qlmarkdown
   qlstephen
+  qlvideo
   quicklook-csv
   quicklook-json
   spotify
