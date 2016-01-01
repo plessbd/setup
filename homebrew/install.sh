@@ -25,17 +25,16 @@ brewgrams=(
 	ngrep
 	shellcheck
 	thefuck
-  android-platform-tools
-  caskroom/cask/brew-cask
-  dockutil
-  ssh-copy-id
-  tree
-  wget
+	android-platform-tools
+	dockutil
+	ssh-copy-id
+	tree
+	wget
 )
 
 for tap in "${taps[@]}";
 do
-	brew install $tap
+	brew tap $tap
 done
 
 brew install "${brewgrams[@]}"
