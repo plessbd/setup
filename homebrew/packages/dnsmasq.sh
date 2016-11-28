@@ -10,10 +10,10 @@ if [ $? -eq 1 ]; then
 	# Copy the daemon configuration file into place.
 	sudo cp "$(brew list dnsmasq | grep /homebrew.mxcl.dnsmasq.plist$)" /Library/LaunchDaemons/
 	# Start Dnsmasq automatically.
-	echo "address=/dev/127.0.0.1" >> /usr/local/etc/dnsmasq.conf
+	echo "address=/self/127.0.0.1" >> /usr/local/etc/dnsmasq.conf
 	# Then to load dnsmasq now:
 	sudo mkdir -p /etc/resolver/
-	echo "nameserver 127.0.0.1\ndomain dev" | sudo tee -a /etc/resolver/dev
+	echo "nameserver 127.0.0.1\ndomain self" | sudo tee -a /etc/resolver/self
 	echo "nameserver 127.0.0.1\ndomain ."   | sudo tee -a /etc/resolver/offline
 	sudo launchctl load /Library/LaunchDaemons/homebrew.mxcl.dnsmasq.plist
 else

@@ -1,13 +1,10 @@
 #!/bin/bash
 
 CASKS=(
-  bettertouchtool
   betterzipql
   cakebrew
   dash
-  firefoxdeveloperedition
-  google-chrome-dev
-  iterm2
+  font-source-code-pro
   itsycal
   lastpass
   launchrocket
@@ -17,12 +14,22 @@ CASKS=(
   qlvideo
   quicklook-csv
   quicklook-json
-  spotify
+  sequel-pro-nightly
   the-unarchiver
-  virtualbox
+  virtualbox-extension-pack
   vlc
+  yakyak
 )
 
-brew cask install --appdir=/Applications "${CASKS[@]}"
+for cask in "${CASKS[@]}";
+do
+  echo "${installedCasks}" | grep "${gram}" > /dev/null
+  if [ $? -eq 1 ]; then
+  	brew cask install ${cask}
+  	#shellcheck disable=SC2154
+  else
+  	echo "${cask} is already installed"
+  fi
+done
 
 exit 0

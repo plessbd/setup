@@ -16,17 +16,17 @@ else
 fi
 
 taps=(
+  caskroom/fonts
   caskroom/versions
+  homebrew/dupes
   homebrew/services
 )
 
 brewgrams=(
 	hub
 	ngrep
-	shellcheck
-	thefuck
-	android-platform-tools
 	dockutil
+  rsync
 	ssh-copy-id
 	tree
 	wget
@@ -39,6 +39,7 @@ done
 
 brew install "${brewgrams[@]}"
 
-find "$(dirname $0)"/packages/ -name "*.sh" | while read package ; do sh "${package}" ; done
+export installedCasks="$(brew cask list)"
+find "$(dirname $0)"/packages -name "*.sh" | while read package ; do sh "${package}" ; done
 
 exit 0

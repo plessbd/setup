@@ -4,7 +4,7 @@ if [ $? -eq 1 ]; then
 
 	brew tap homebrew/nginx
 	brew install nginx-full --with-fancyindex-module  --with-geoip \
-		--with-gzip-static --with-gunzip --with-upload-module  \
+		--with-gzip-static --with-gunzip \
 		--with-upload-progress-module --with-http2 --with-realip \
 		--with-txid --devel
 
@@ -13,7 +13,7 @@ if [ $? -eq 1 ]; then
 		rm -rf "$(brew --prefix)/etc/nginx/servers"
 
 		#shellcheck disable=SC2154
-		$setupHome/bin/createCAandCert.sh -c blahblahblah -b
+		$setupHome/bin/createCAandCert.sh
 
 	else
 		echo "nginx is already installed"

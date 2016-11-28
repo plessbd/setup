@@ -20,8 +20,8 @@ echo "\t\tCleaning up dock icons"
 
 dockutil --remove all --no-restart
 dockutil --add "/Applications/Launchpad.app" --no-restart
-dockutil --add "/Applications/Google Chrome.app" --no-restart
-dockutil --add "/Applications/Atom.app" --no-restart
+dockutil --add "/Applications/Firefox.app" --no-restart
+dockutil --add "/Applications/Atom Beta.app" --no-restart
 dockutil --add "/Applications" --view grid --display folder --sort name --no-restart
 dockutil --add "~/Downloads" --view grid --display folder --sort name --no-restart
 

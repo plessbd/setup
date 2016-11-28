@@ -13,7 +13,6 @@ fi
 fpath=(/Volumes/750GBHD/usr/local/share/zsh/site-functions $fpath)
 
 # Customize to your needs...
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 # export PATH="/Volumes/750GBHD/usr/local/bin:/Volumes/750GBHD/usr/local/sbin:$PATH"
 
@@ -36,4 +35,5 @@ alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 # Finally, clear download history from quarantine. https://mths.be/bum
 alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl; sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
 
-eval "$(thefuck --alias)"
+alias cd="cdls"
+alias zxc="PATH=$(npm bin):${PATH}"
