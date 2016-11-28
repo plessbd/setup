@@ -5,6 +5,7 @@ CASKS=(
   cakebrew
   dash
   font-source-code-pro
+  franz
   itsycal
   lastpass
   launchrocket
