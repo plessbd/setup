@@ -14,6 +14,8 @@ fpath=(/Volumes/750GBHD/usr/local/share/zsh/site-functions $fpath)
 
 # Customize to your needs...
 
+export HOMEBREW_NO_ANALYTICS=1
+
 # export PATH="/Volumes/750GBHD/usr/local/bin:/Volumes/750GBHD/usr/local/sbin:$PATH"
 
 #export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"

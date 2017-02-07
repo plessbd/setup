@@ -15,6 +15,8 @@ else
   #brew update
 fi
 
+brew analytics off
+
 taps=(
   caskroom/fonts
   caskroom/versions

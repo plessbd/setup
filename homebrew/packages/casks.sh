@@ -6,6 +6,8 @@ CASKS=(
   dash
   font-source-code-pro
   franz
+  hyper
+  iterm2
   itsycal
   lastpass
   launchrocket
@@ -24,7 +26,7 @@ CASKS=(
 
 for cask in "${CASKS[@]}";
 do
-  echo "${installedCasks}" | grep "${gram}" > /dev/null
+  echo "${installedCasks}" | grep "${cask}" > /dev/null
   if [ $? -eq 1 ]; then
   	brew cask install ${cask}
   	#shellcheck disable=SC2154

@@ -1,5 +1,6 @@
 #!/bin/sh
-
+git submodule init
+git submodule update
 export setupHome="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 sudo -v
